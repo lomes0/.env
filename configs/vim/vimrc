@@ -1,0 +1,18 @@
+source $myvim/modules/settings.vim " (Vundle, Vim-Plug)
+source $myvim/modules/keyboard.vim
+source $myvim/modules/plugins.vim
+
+"-----------------------------------------
+" CODING ---------------------------------
+"-----------------------------------------
+if &filetype ==# 'tex'
+  source $myvim/modules/coding/latex.vim
+endif
+
+if &filetype ==# 'go'
+  source $myvim/modules/coding/go.vim
+endif
+
+if &filetype ==# 'js' || &filetype ==# 'vue' 
+  source $myvim/modules/coding/js.vim
+endif
