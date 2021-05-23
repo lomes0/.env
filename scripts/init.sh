@@ -24,7 +24,7 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ########## Tmux plugin manager
 sudo apt install tmux
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-# ln -s $my_configs/tmux.conf ~/.tmux.conf
+ln -s $my_configs/tmux.conf ~/.tmux.conf
 
 
 
