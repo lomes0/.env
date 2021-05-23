@@ -3,7 +3,7 @@
 " -------------------
 
 let mapleader = "<"
-set backupdir=~/.vim/tmp-files
+set backupdir=/tmp/vim
 set pastetoggle=<F2>
 set number
 set hlsearch
