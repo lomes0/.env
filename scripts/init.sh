@@ -2,14 +2,14 @@
 
 ########## Dependencies
 sudo apt update
-sudo apt install vim vim-gtk3 cscope tmux git zsh curl
+sudo apt install vim vim-gtk3 cscope git zsh curl
 
 
 ########## Vim
 sudo apt install vim vim-gtk3
 mkdir /tmp/vim
-ln -s $myvim/vimrc ~/.vimrc
-ln -s $myvim/ ~/.vim
+ln -s $my_configs/vim/vimrc ~/.vimrc
+ln -s $my_configs/vim ~/.vim
 
 
 ########## Ohmyzsh
@@ -22,7 +22,9 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 
 
 ########## Tmux plugin manager
+sudo apt install tmux
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+# ln -s $my_configs/tmux.conf ~/.tmux.conf
 
 
 
