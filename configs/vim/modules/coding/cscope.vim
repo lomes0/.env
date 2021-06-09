@@ -50,6 +50,6 @@ nnoremap <leader>ll :call LoadDB()<CR>
 nnoremap <F5> :call RegenTags()<CR>
 
 "---Tags
-nnoremap <leader><tab> <plug>(fzf-maps-n)
+" nnoremap <leader><tab> <plug>(fzf-maps-n)
 nnoremap <leader>, "zyiw:exe " Tags ".@z.""<CR>
 nnoremap <leader>. :Tags<CR>

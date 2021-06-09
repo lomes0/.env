@@ -17,10 +17,9 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install()  }  }
 Plug 'junegunn/fzf.vim'
 
 "Programming
-Plug 'lervag/vimtex'
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-Plug 'brookhong/cscope.vim'
-Plug 'hari-rangarajan/CCTree' 
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }      " vim go plugin
+Plug 'brookhong/cscope.vim'                             " c function inspection
+Plug 'hari-rangarajan/CCTree'                           " c call tree tool 
 "ccglue?
 call plug#end()
 
@@ -35,9 +34,9 @@ filetype off                  " required
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'morhetz/gruvbox'
-Plugin 'tpope/vim-fugitive'
+Plugin 'VundleVim/Vundle.vim'           " plugin manager
+Plugin 'morhetz/gruvbox'                " color scheme
+Plugin 'tpope/vim-fugitive'             " git plugin
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

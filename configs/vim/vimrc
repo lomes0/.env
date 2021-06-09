@@ -1,18 +1,19 @@
 source $myvim/modules/settings.vim " (Vundle, Vim-Plug)
 source $myvim/modules/keyboard.vim
 source $myvim/modules/plugins.vim
+source $myvim/modules/coding/cscope.vim
 
 "-----------------------------------------
 " CODING ---------------------------------
 "-----------------------------------------
-if &filetype ==# 'tex'
-  source $myvim/modules/coding/latex.vim
-endif
-
 if &filetype ==# 'go'
   source $myvim/modules/coding/go.vim
 endif
 
 if &filetype ==# 'js' || &filetype ==# 'vue' 
   source $myvim/modules/coding/js.vim
+endif
+
+if &filetype ==# 'hpp' || &filetype ==# 'h' || &filetype ==# 'cpp' || &filetype ==# 'c' || &filetype ==# 'cxx' || &filetype ==# 'cc' 
+  source $myvim/modules/coding/cscope.vim
 endif
