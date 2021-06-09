@@ -2,7 +2,9 @@
 
 ########## Dependencies
 sudo apt update
-sudo apt install vim vim-gtk3 cscope git zsh curl
+sudo apt install git zsh curl
+sudo apt install vim vim-gtk3 
+sudo apt install cscope exuberant-ctags
 
 
 ########## Vim
