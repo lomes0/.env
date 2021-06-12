@@ -21,11 +21,6 @@ function! LoadDB()
     endif
 endfunction
 
-augroup qf
-    autocmd!
-    autocmd QuickFixCmdPost * cwindow
-augroup END
-
 function! RegenTags(...)
 	:silent !rm tags	2> /dev/null
 	:silent !rm cscope.out  2> /dev/null
@@ -45,11 +40,16 @@ nnoremap <leader>fd "zyiw:exe " cscope find d ".@z.""
 nnoremap <leader>g "zyiw:exe " cscope find g ".@z.""<CR>
 nnoremap <leader>s "zyiw:exe " cscope find s ".@z.""<CR>
 
-au BufEnter /* call LoadCscope()
-nnoremap <leader>ll :call LoadDB()<CR>
-nnoremap <F5> :call RegenTags()<CR>
+" Not sure if needed
+"au BufEnter /* call LoadCscope()
+"nnoremap <leader>ll :call LoadDB()<CR>
 
-"---Tags
-" nnoremap <leader><tab> <plug>(fzf-maps-n)
+
+" Find tag containning current word
 nnoremap <leader>, "zyiw:exe " Tags ".@z.""<CR>
+
+" Generate tags
 nnoremap <leader>. :Tags<CR>
+
+" Generate tags & cscope
+nnoremap <F5> :call RegenTags()<CR>
