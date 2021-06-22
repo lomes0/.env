@@ -1,7 +1,6 @@
 source $myvim/modules/settings.vim " (Vundle, Vim-Plug)
 source $myvim/modules/keyboard.vim
 source $myvim/modules/plugins.vim
-source $myvim/modules/coding/cscope.vim
 
 "-----------------------------------------
 " CODING ---------------------------------
