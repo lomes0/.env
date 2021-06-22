@@ -2,17 +2,22 @@ source $myvim/modules/settings.vim " (Vundle, Vim-Plug)
 source $myvim/modules/keyboard.vim
 source $myvim/modules/plugins.vim
 
+colorscheme nes
+
 "-----------------------------------------
 " CODING ---------------------------------
 "-----------------------------------------
-if &filetype ==# 'go'
+let g:c_files = ["hpp", "h", "cpp", "c", "cxx", "cc"]
+let g:f_type = &filetype
+
+if g:f_type ==# 'go'
   source $myvim/modules/coding/go.vim
 endif
 
-if &filetype ==# 'js' || &filetype ==# 'vue' 
+if g:f_type ==# 'js' || g:f_type ==# 'vue' 
   source $myvim/modules/coding/js.vim
 endif
 
-if &filetype ==# 'hpp' || &filetype ==# 'h' || &filetype ==# 'cpp' || &filetype ==# 'c' || &filetype ==# 'cxx' || &filetype ==# 'cc' 
+if index(g:c_files, g:f_type) >= 0
   source $myvim/modules/coding/cscope.vim
 endif
