@@ -20,6 +20,8 @@ Plug 'junegunn/fzf.vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }      " vim go plugin
 Plug 'brookhong/cscope.vim'                             " c function inspection
 Plug 'hari-rangarajan/CCTree'                           " c call tree tool 
+Plug 'ghifarit53/tokyonight-vim'                        " color scheme
+Plug 'ajmwagar/vim-deus'                                " color scheme
 "ccglue?
 call plug#end()
 
@@ -35,8 +37,9 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'           " plugin manager
-Plugin 'morhetz/gruvbox'                " color scheme
 Plugin 'tpope/vim-fugitive'             " git plugin
+Plugin 'morhetz/gruvbox'                " color scheme
+Plugin 'flazz/vim-colorschemes'         " color scheme
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
