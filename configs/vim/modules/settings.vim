@@ -12,12 +12,11 @@ set showmode
 set expandtab
 set backspace=indent,eol,start
 set rtp+=~/.fzf
-set mouse=a
 set timeoutlen=1000 ttimeoutlen=0
 set smartindent
 set autoindent
 syntax enable
-set clipboard=unnamedplus
+"set clipboard=unnamedplus
 
 let delimitMate_expand_cr=1
 autocmd CursorMoved * exe printf('match MoreMsg /\V\<%s\>/', escape(expand('<cword>'), '/\'))
