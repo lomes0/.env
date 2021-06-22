@@ -18,7 +18,12 @@ noremap <S-j> <C-d>
 " COPY PASTE ---------
 "---------------------
 vnoremap y "+y
-inoremap <C-v>  <C-O>"+p
+vnoremap <C-c> "+y
+inoremap <C-v> <C-O>"+p
+
+"---------------------
+" Exit Insert Mode ---
+"---------------------
 inoremap <C-c> <Esc>:w<Cr>l
 
 "---------------------
