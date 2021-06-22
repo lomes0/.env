@@ -19,9 +19,6 @@ set autoindent
 syntax enable
 set clipboard=unnamedplus
 
-autocmd vimenter * colorscheme gruvbox
-set background=light
-
 let delimitMate_expand_cr=1
 autocmd CursorMoved * exe printf('match MoreMsg /\V\<%s\>/', escape(expand('<cword>'), '/\'))
 
