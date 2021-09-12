@@ -2,8 +2,6 @@ source $my_vim/modules/settings.vim " (Vundle, Vim-Plug)
 source $my_vim/modules/keyboard.vim
 source $my_vim/modules/plugins.vim
 
-colorscheme nes
-
 "-----------------------------------------
 " CODING ---------------------------------
 "-----------------------------------------
