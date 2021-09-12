@@ -36,6 +36,7 @@ ln -s $my_configs/tmux.conf ~/.tmux.conf
 # Vim
 # ----
 sudo apt install vim vim-gtk3
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 mkdir /tmp/vim
 ln -s $my_configs/vim/vimrc ~/.vimrc
 ln -s $my_configs/vim ~/.vim
