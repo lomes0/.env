@@ -5,12 +5,12 @@ sudo apt update
 sudo apt install git zsh curl
 sudo apt install vim vim-gtk3 
 sudo apt install cscope exuberant-ctags
+sudo apt install manpages-dev
 
 
 # Ohmyzsh
 # -------
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
 
 
 # Env
