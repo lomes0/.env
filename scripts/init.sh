@@ -15,8 +15,9 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 # Env
 # ----
-echo "export my_vim='~/.vim/'" >> ~/.fzf.zsh
-echo "export my_configs='~/Documents/env-setup/configs/'" >> ~/.fzf.zsh
+echo "export my_vim=~/.vim/" >> ~/.fzf.zsh
+echo "export my_configs=~/Documents/env-setup/configs/" >> ~/.fzf.zsh
+echo "export PATH=$PATH:/usr/local/go/bin" >> ~/.fzf.zsh
 
 
 # Fzf
