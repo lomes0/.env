@@ -12,6 +12,13 @@ sudo apt install cscope exuberant-ctags
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 
+
+# Env
+# ----
+echo "export my_vim='~/.vim/'" >> ~/.fzf.zsh
+echo "export my_configs='~/Documents/env-setup/configs/'" >> ~/.fzf.zsh
+
+
 # Fzf
 # ---
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
