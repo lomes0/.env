@@ -1,6 +1,6 @@
-source $myvim/modules/settings.vim " (Vundle, Vim-Plug)
-source $myvim/modules/keyboard.vim
-source $myvim/modules/plugins.vim
+source $my_vim/modules/settings.vim " (Vundle, Vim-Plug)
+source $my_vim/modules/keyboard.vim
+source $my_vim/modules/plugins.vim
 
 colorscheme nes
 
@@ -11,13 +11,13 @@ let g:c_files = ["hpp", "h", "cpp", "c", "cxx", "cc"]
 let g:f_type = &filetype
 
 if g:f_type ==# 'go'
-  source $myvim/modules/coding/go.vim
+  source $my_vim/modules/coding/go.vim
 endif
 
 if g:f_type ==# 'js' || g:f_type ==# 'vue' 
-  source $myvim/modules/coding/js.vim
+  source $my_vim/modules/coding/js.vim
 endif
 
 if index(g:c_files, g:f_type) >= 0
-  source $myvim/modules/coding/cscope.vim
+  source $my_vim/modules/coding/cscope.vim
 endif
