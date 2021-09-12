@@ -7,27 +7,30 @@ sudo apt install vim vim-gtk3
 sudo apt install cscope exuberant-ctags
 
 
-########## Vim
-sudo apt install vim vim-gtk3
-mkdir /tmp/vim
-ln -s $my_configs/vim/vimrc ~/.vimrc
-ln -s $my_configs/vim ~/.vim
-
-
-########## Ohmyzsh
+# Ohmyzsh
+# -------
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 
-########## Fzf
+# Fzf
+# ---
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
 
 
-########## Tmux plugin manager
+# Tmux plugin manager
+# -------------------
 sudo apt install tmux
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ln -s $my_configs/tmux.conf ~/.tmux.conf
 
+
+# Vim
+# ----
+sudo apt install vim vim-gtk3
+mkdir /tmp/vim
+ln -s $my_configs/vim/vimrc ~/.vimrc
+ln -s $my_configs/vim ~/.vim
 
 
 
