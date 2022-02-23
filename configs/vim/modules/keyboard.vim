@@ -22,11 +22,6 @@ vnoremap <C-c> "+y
 inoremap <C-v> <C-O>"+p
 
 "---------------------
-" Exit Insert Mode ---
-"---------------------
-inoremap <C-c> <Esc>:w<Cr>l
-
-"---------------------
 " TABS ---------------
 "---------------------
 set hidden

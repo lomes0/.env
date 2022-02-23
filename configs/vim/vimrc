@@ -1,23 +1,7 @@
-source $my_configs/vim/modules/settings.vim " (Vundle, Vim-Plug)
-source $my_configs/vim/modules/keyboard.vim
-source $my_configs/vim/modules/plugins.vim
+source $__configs__/vim/modules/settings.vim " (Vundle, Vim-Plug)
+source $__configs__/vim/modules/keyboard.vim
+source $__configs__/vim/modules/plugins.vim
 
-autocmd vimenter * ++nested colorscheme gruvbox
-
-"-----------------------------------------
-" CODING ---------------------------------
-"-----------------------------------------
-let g:c_files = ["hpp", "h", "cpp", "c", "cxx", "cc"]
-let g:f_type = &filetype
-
-if g:f_type ==# 'go'
-  source $my_configs/vim/modules/coding/go.vim
-endif
-
-if g:f_type ==# 'js' || g:f_type ==# 'vue' 
-  source $my_configs/vim/modules/coding/js.vim
-endif
-
-if index(g:c_files, g:f_type) >= 0
-  source $my_configs/vim/modules/coding/cscope.vim
-endif
+set t_Co=256
+colorscheme 1989
+colorscheme gruvbox

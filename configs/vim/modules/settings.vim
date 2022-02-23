@@ -1,9 +1,9 @@
 "--------------------
-" Global ------------
+" GLOBAL
 " -------------------
 
 let mapleader = "<"
-set backupdir=/tmp/vim
+set backupdir=/var/vim/tmp/
 set pastetoggle=<F2>
 set number
 set hlsearch
@@ -15,15 +15,21 @@ set rtp+=~/.fzf
 set timeoutlen=1000 ttimeoutlen=0
 set smartindent
 set autoindent
+set noexpandtab
+set copyindent
+set preserveindent
+set softtabstop=0
+set shiftwidth=4
+set tabstop=4
+set backupcopy=yes
+let delimitMate_expand_cr=1
 syntax enable
-"set clipboard=unnamedplus
 
 let delimitMate_expand_cr=1
 autocmd CursorMoved * exe printf('match MoreMsg /\V\<%s\>/', escape(expand('<cword>'), '/\'))
 
-
 "---------------------
-" FZF ----------------
+" FZF
 "---------------------
 let g:fzf_layout = { 'down': '~100%' }
 nnoremap <C-b> :Buffers<CR>
@@ -32,28 +38,8 @@ nnoremap <S-f> :Files ~/<CR>
 nnoremap <C-l> :Lines<CR>
 
 "---------------------
-" TMUX ---------------
-"---------------------
-if &term =~ '^screen'
-    " tmux will send xterm-style keys when its xterm-keys option is on
-    execute "set <xUp>=\e[1;*A"
-    execute "set <xDown>=\e[1;*B"
-    execute "set <xRight>=\e[1;*C"
-    execute "set <xLeft>=\e[1;*D"
-endif
-
-"---------------------
-" AUTOSAVE -----------
+" AUTOSAVE
 "---------------------
 let g:auto_save = 1
 let g:auto_save_in_insert_mode = 0
 let g:auto_save_silent = 0
-
-"---------------------
-" AIRLINE ------------
-"---------------------
-set laststatus=2
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#fnamemod = ':t'
-let g:airline#extensions#tabline#left_sep = ' '
-let g:airline#extensions#tabline#left_alt_sep = '|'
