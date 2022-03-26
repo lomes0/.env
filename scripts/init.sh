@@ -7,7 +7,6 @@ sudo apt install vim vim-gtk3
 sudo apt install cscope exuberant-ctags
 sudo apt install tmux
 sudo apt install zsh
-sudo apt install zsh
 
 ########
 # PATHS
@@ -37,11 +36,14 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 
-
 #########
 # POST
 #########
-echo "export __configs__=`~/_/__env__/configs/`" >> ~/.profile
+echo "export __configs__=~/_/__env__/configs/" >> ~/.profile
 
-# TODO open terminal on full screen
+#########
+# TODO
+#########
+# open terminal on full screen
 # sudo vim /usr/share/applications/org.gnome.Terminal.desktop 
+# copy etc.hosts
