@@ -44,6 +44,11 @@ echo "export __configs__=~/_/__env__/configs/" >> ~/.profile
 #########
 # TODO
 #########
-# open terminal on full screen
-# sudo vim /usr/share/applications/org.gnome.Terminal.desktop 
-# copy etc.hosts
+# full-screen:		/usr/share/applications/org.gnome.Terminal.desktop 
+# sounds:			/usr/share/sounds/gnome/default/alerts/
+# terminal-bell:
+# terminal-color:	soliarized light
+# zshrc:		simple theme
+# cpy etc.hosts
+# chmod -R /var/vim/
+# gogh theme:		FrontendFunForrest
