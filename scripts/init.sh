@@ -7,14 +7,16 @@ sudo apt install vim vim-gtk3
 sudo apt install cscope exuberant-ctags
 sudo apt install tmux
 sudo apt install zsh
+sudo apt install mandoc manpages-posix manpages-posix-dev
+
 
 ########
 # PATHS
 ########
 sudo mkdir -p /var/vim/tmp
-ln -s $__configs__/vim/vimrc ~/.vimrc
-ln -s $__configs__/vim ~/.vim
-ln -s $__configs__/tmux.conf ~/.tmux.conf
+ln -s $__configs/vim/vimrc ~/.vimrc
+ln -s $__configs/vim ~/.vim
+ln -s $__configs/tmux.conf ~/.tmux.conf
 
 
 ###########
