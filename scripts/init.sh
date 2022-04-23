@@ -23,6 +23,14 @@ ln -s $__configs__/tmux.conf ~/.tmux.conf
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 
+
+###########
+# Theme.sh
+###########
+#Install https://github.com/lemnos/theme.sh
+
+
+
 ########
 # FZF
 ########
@@ -39,7 +47,7 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 #########
 # POST
 #########
-echo "export __configs__=~/_/__env__/configs/" >> ~/.profile
+echo "source ~/__env/configs/lomes0"
 
 #########
 # TODO
@@ -48,7 +56,5 @@ echo "export __configs__=~/_/__env__/configs/" >> ~/.profile
 # sounds:			/usr/share/sounds/gnome/default/alerts/
 # terminal-bell:
 # terminal-color:	soliarized light
-# zshrc:		simple theme
 # cpy etc.hosts
 # chmod -R /var/vim/
-# gogh theme:		FrontendFunForrest

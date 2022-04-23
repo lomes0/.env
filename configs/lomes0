@@ -1,0 +1,3 @@
+#!/bin/bash
+
+export __configs__=~/__env/configs/
