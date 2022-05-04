@@ -1,7 +1,6 @@
 "--------------------
 " GLOBAL
 " -------------------
-
 let mapleader = "<"
 set backupdir=/var/vim/tmp/
 set pastetoggle=<F2>
