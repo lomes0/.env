@@ -54,8 +54,8 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 #########
 # TODO
 #########
-# full-screen:		/usr/share/applications/org.gnome.Terminal.desktop 
-# sounds:			/usr/share/sounds/gnome/default/alerts/
-# sounds:			terminal bell
-# colors:			terminal soliarized light
-# files: 			etc.hosts
+# full-screen:     /usr/share/applications/org.gnome.Terminal.desktop 
+# sounds:          /usr/share/sounds/gnome/default/alerts/
+# sounds:          terminal bell
+# colors:          terminal soliarized light
+# files:           etc.hosts
