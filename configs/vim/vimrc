@@ -1,6 +1,7 @@
 source $__configs/vim/modules/settings.vim " (Vundle, Vim-Plug)
 source $__configs/vim/modules/keyboard.vim
 source $__configs/vim/modules/plugins.vim
+source $__configs/vim/modules/coding/cscope.vim
 
 set t_Co=256
 colorscheme 1989

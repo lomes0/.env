@@ -6,11 +6,11 @@ function! LoadCscope()
     set nocscopeverbose " suppress 'duplicate connection' error
     exe "cs add " . db . " " . path
     set cscopeverbose
-	""!cscope -Rb
+    !cscope -Rb
   endif
 endfunction
 
-function! LoadDB()
+function! LoadCCTREE()
     if filereadable('cscope.out')
 		redir => message
         CCTreeLoadDB cscope.out
@@ -30,26 +30,23 @@ function! RegenTags(...)
 	:cs reset
 endfunction
 
+function! RegenTags__(...)
+	:silent !rm tags	2> /dev/null
+	:silent !rm cscope.out  2> /dev/null
+	:silent cs reset
+
+	:!ctags -R
+	:!cscope -Rb
+	:cs add ./cscope.out
+endfunction
+
 "---Mappings
 nnoremap <leader>a "zyiw:exe " cscope find a ".@z.""<CR>
-nnoremap <leader>fa "zyiw:exe " cscope find a ".@z.""
 nnoremap <leader>c "zyiw:exe " cscope find c ".@z.""<CR>
-nnoremap <leader>fc "zyiw:exe " cscope find c ".@z.""
 nnoremap <leader>d "zyiw:exe " cscope find d ".@z.""<CR>
-nnoremap <leader>fd "zyiw:exe " cscope find d ".@z.""
 nnoremap <leader>g "zyiw:exe " cscope find g ".@z.""<CR>
 nnoremap <leader>s "zyiw:exe " cscope find s ".@z.""<CR>
+nnoremap <leader>t "zyiw:exe " Tags          ".@z.""<CR>
 
-" Not sure if needed
-"au BufEnter /* call LoadCscope()
-"nnoremap <leader>ll :call LoadDB()<CR>
-
-
-" Find tag containning current word
-nnoremap <leader>, "zyiw:exe " Tags ".@z.""<CR>
-
-" Generate tags
-nnoremap <leader>. :Tags<CR>
-
-" Generate tags & cscope
-nnoremap <F5> :call RegenTags()<CR>
+nnoremap <F5>           :call RegenTags__()<CR><CR><CR>
+nnoremap <leader>lct    :call LoadCCTREE()<CR>
