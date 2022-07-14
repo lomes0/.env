@@ -10,10 +10,10 @@ function! LoadCscope()
   endif
 endfunction
 
-function! LoadDB()
+function! LoadCCTREE()
     if filereadable('cscope.out')
 		redir => message
-        CCTreeLoadDB cscope.out
+		CCTreeLoadDB cscope.out
 		redir end
 		new
 		setlocal buftype=nofile bufhidden=wipe noswapfile nobuflisted nomodified
@@ -24,10 +24,11 @@ endfunction
 function! RegenTags(...)
 	:silent !rm tags	2> /dev/null
 	:silent !rm cscope.out  2> /dev/null
+	:silent cs reset
 
-	:Tags
+	:!ctags -R
 	:!cscope -Rb
-	:cs reset
+	:cs add ./cscope.out
 endfunction
 
 "---Mappings
@@ -40,16 +41,5 @@ nnoremap <leader>fd "zyiw:exe " cscope find d ".@z.""
 nnoremap <leader>g "zyiw:exe " cscope find g ".@z.""<CR>
 nnoremap <leader>s "zyiw:exe " cscope find s ".@z.""<CR>
 
-" Not sure if needed
-"au BufEnter /* call LoadCscope()
-"nnoremap <leader>ll :call LoadDB()<CR>
-
-
-" Find tag containning current word
-nnoremap <leader>, "zyiw:exe " Tags ".@z.""<CR>
-
-" Generate tags
-nnoremap <leader>. :Tags<CR>
-
-" Generate tags & cscope
-nnoremap <F5> :call RegenTags()<CR>
+nnoremap <F5>        :call RegenTags()<CR><CR><CR>
+nnoremap <leader>lct :call LoadCCTREE()<CR>
