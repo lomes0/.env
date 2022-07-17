@@ -13,7 +13,7 @@ endfunction
 function! LoadCCTREE()
     if filereadable('cscope.out')
 		redir => message
-        CCTreeLoadDB cscope.out
+		CCTreeLoadDB cscope.out
 		redir end
 		new
 		setlocal buftype=nofile bufhidden=wipe noswapfile nobuflisted nomodified
@@ -24,10 +24,11 @@ endfunction
 function! RegenTags(...)
 	:silent !rm tags	2> /dev/null
 	:silent !rm cscope.out  2> /dev/null
+	:silent cs reset
 
-	:Tags
+	:!ctags -R
 	:!cscope -Rb
-	:cs reset
+	:cs add ./cscope.out
 endfunction
 
 function! RegenTags__(...)
