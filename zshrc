@@ -9,10 +9,15 @@ source $ZSH/oh-my-zsh.sh
 ###################
 # Exports
 ###################
-# export LANG=en_US.UTF-8
+export __env="~/.env"
 
 ###################
 # Aliases
 ###################
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+###################
+# KDE
+###################
+xmodmap -e "pointer = 1 3 2" 1> /dev/null 2> /dev/null
